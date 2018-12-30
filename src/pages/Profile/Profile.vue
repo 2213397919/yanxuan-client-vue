@@ -1,10 +1,15 @@
 <template>
-    <div>Profile</div>
+    <div>
+      <LoginHeader/>
+    </div>
 </template>
 
 <script>
+  import LoginHeader from '../../components/LoginHeader/LoginHeader'
   export default {
-    name: 'Profile'
+    components: {
+      LoginHeader
+    }
   }
 </script>
 

@@ -1,65 +1,68 @@
 <template>
- <footer class="footer">
-     <a href="javascript:;" class="footer-item" :class="{on: $route.path === '/home'}" @click="goto('/home')">
-       <span><i class="iconfont icon-shouye2"></i></span>
-       <span class="font">首页</span>
-     </a>
-     <a href="javascript:;" class="footer-item" :class="{on: $route.path === '/category'}" @click="goto('/category')">
-       <span><i class="iconfont icon-fenlei"></i></span>
-       <span class="font">分类</span>
-     </a>
-     <a href="javascript:;" class="footer-item" :class="{on: $route.path === '/general'}" @click="goto('/general')">
-       <span><i class="iconfont icon-fangkuai"></i></span>
-       <span class="font">识物</span>
-     </a>
-     <a href="javascript:;" class="footer-item" :class="{on: $route.path === '/shopping'}" @click="goto('/shopping')">
-       <span><i class="iconfont icon-gouwuchekong"></i></span>
-       <span class="font">购物车</span>
-     </a>
-     <a href="javascript:;" class="footer-item" :class="{on: $route.path === '/profile'}" @click="goto('/profile')">
-       <span><i class="iconfont icon-icon-"></i></span>
-       <span class="font">个人</span>
-     </a>
- </footer>
+  <footer class="footer">
+    <nav>
+      <a href="javascript:;" class="item" @click="goto('/home')" :class="{active: $route.path === '/home'}">
+        <i class="iconfont icon-shouye2"></i>
+        <span>首页</span>
+      </a>
+      <a href="javascript:;" class="item" @click="goto('/general')" :class="{active: $route.path === '/general'}">
+        <i class="iconfont icon-fangkuai"></i>
+        <span>识物</span>
+      </a>
+      <a href="javascript:;" class="item" @click="goto('/category')" :class="{active: $route.path === '/category'}">
+        <i class="iconfont icon-fenlei"></i>
+        <span>分类</span>
+      </a>
+      <a href="javascript:;" class="item" @click="goto('/shopping')" :class="{active: $route.path === '/shopping'}">
+        <i class="iconfont icon-gouwuchekong"></i>
+        <span>购物车</span>
+      </a>
+      <a href="javascript:;" class="item" @click="goto('/profile')" :class="{active: $route.path === '/profile'}">
+        <i class="iconfont icon-icon-"></i>
+        <span>个人</span>
+      </a>
+    </nav>
+  </footer>
 </template>
 
 <script>
   export default {
     methods: {
-      goto(path){
-        this.$router.replace(path);
+      goto (path) {
+        this.$router.replace(path)
       }
     }
   }
 </script>
 
-<style lang="stylus" rel="stylesheet/stylus" scoped>
-@import "../../../static/stylus/mixin.styl"
+<style lang='stylus' rel='stylesheet/stylus'>
+  @import '../../common/stylus/mixins.styl'
   .footer
-    top-border-1px(#e4e4e4)
     position fixed
-    bottom 0
+    z-index 5
     left 0
     right 0
-    width 100%
-    height 50px
+    bottom 0
+    height px2rem(100)
     background-color #fafafa
-    display flex
-    .footer-item
-     display flex
-     float left
-     flex 1
-     flex-direction column
-     align-items center
-     margin-top 5px
-     color #666666
-     span
-       margin-top 2px
-       margin-bottom 2px
-       .iconfont
-         font-size 22px
-     &.on
-       color red
-     .font
-       font-size 12px
+    border-top 1px solid #d9d9d9
+    nav
+      display flex
+      flex-direction row
+      justify-content space-around
+      font-size px2rem(24)
+      .item
+        position relative
+        text-align center
+        color #666666
+        i
+          display block
+          font-size px2rem(42)
+          padding-top px2rem(16)
+        span
+          display block
+          margin-top px2rem(10)
+        &.active
+          color $main
+
 </style>
