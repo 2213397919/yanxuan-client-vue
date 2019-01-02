@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import './mock/mockSever'
 import Split from './components/Split/Split'
+import store from './store/store'
 
 Vue.config.productionTip = false
 
@@ -15,5 +16,6 @@ new Vue({
   el: '#app',
   components: { App },
   template: '<App/>',
-  router
+  router,
+  store
 })

@@ -55,7 +55,108 @@
         </div>
       </div>
       <Split/>
+      <HomeContent/>
+      <div class="other">
+        <header>
+          <p>床品件套</p>
+          <p>MUJI等品牌制造商出品</p>
+        </header>
+        <ul>
+          <li>
+            <a href="javascript:;">
+              <div class="pic">
+                <img src="http://yanxuan.nosdn.127.net/8635c42f2b3a92768b12015c491821b5.png?imageView&quality=65&thumbnail=330x330" alt="1111">
+                <p>400根纯棉贡缎，入门奢享高阶柔滑</p>
+              </div>
+              <div class="text">60s锦眠贡缎四件套</div>
+              <div class="price">￥649</div>
+              <div class="new">
+                <span>新品</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="pic">
+                <img src="http://yanxuan.nosdn.127.net/8635c42f2b3a92768b12015c491821b5.png?imageView&quality=65&thumbnail=330x330" alt="1111">
+                <p>400根纯棉贡缎，入门奢享高阶柔滑</p>
+              </div>
+              <div class="text">60s锦眠贡缎四件套</div>
+              <div class="price">￥649</div>
+              <div class="new">
+                <span>新品</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="pic">
+                <img src="http://yanxuan.nosdn.127.net/8635c42f2b3a92768b12015c491821b5.png?imageView&quality=65&thumbnail=330x330" alt="1111">
+                <p>400根纯棉贡缎，入门奢享高阶柔滑</p>
+              </div>
+              <div class="text">60s锦眠贡缎四件套</div>
+              <div class="price">￥649</div>
+              <div class="new">
+                <span>新品</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="pic">
+                <img src="http://yanxuan.nosdn.127.net/8635c42f2b3a92768b12015c491821b5.png?imageView&quality=65&thumbnail=330x330" alt="1111">
+                <p>400根纯棉贡缎，入门奢享高阶柔滑</p>
+              </div>
+              <div class="text">60s锦眠贡缎四件套</div>
+              <div class="price">￥649</div>
+              <div class="new">
+                <span>新品</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="pic">
+                <img src="http://yanxuan.nosdn.127.net/8635c42f2b3a92768b12015c491821b5.png?imageView&quality=65&thumbnail=330x330" alt="1111">
+                <p>400根纯棉贡缎，入门奢享高阶柔滑</p>
+              </div>
+              <div class="text">60s锦眠贡缎四件套</div>
+              <div class="price">￥649</div>
+              <div class="new">
+                <span>新品</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <div class="pic">
+                <img src="http://yanxuan.nosdn.127.net/8635c42f2b3a92768b12015c491821b5.png?imageView&quality=65&thumbnail=330x330" alt="1111">
+                <p>400根纯棉贡缎，入门奢享高阶柔滑</p>
+              </div>
+              <div class="text">60s锦眠贡缎四件套</div>
+              <div class="price">￥649</div>
+              <div class="new">
+                <span>新品</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <div class="content">
+          <div class="bd">
+            <a href="javascript:;" >下载APP</a>
+            <a href="javascript:;">电脑版</a>
+          </div>
+          <p class="desc">
+            <span>网易公司版权所有 © 1997-2018</span>
+            <br>
+            <span>食品经营许可证：JY13301080111719</span>
+          </p>
+        </div>
+      </div>
     </div>
+    <GoTop/>
 </div>
 </template>
 
@@ -64,22 +165,17 @@
   import Banner from '../../components/Banner/Banner'
   import List from '../../components/List/List'
   import Split from '../../components/Split/Split'
-  // import BScroll from 'better-scroll'
+  import HomeContent from '../../components/Home_Content/Home_Content'
+  import GoTop from '../../components/GoTop/index'
   export default {
     components:{
       Split,
       Home_header,
       Banner,
-      List
+      List,
+      HomeContent,
+      GoTop
     },
-    // mounted(){
-    //   this.$nextTick(()=>{
-    //     new BScroll('.content',{
-    //       click:true,
-    //       scrollY:true
-    //     })
-    //   })
-    // }
   }
 </script>
 
@@ -195,5 +291,108 @@
                width px2rem(200)
                height px2rem(215)
                float right
+
+    .copyright
+      width 100%
+      height px2rem(265)
+      background #414141;
+      margin-bottom 100px
+      .content
+        box-sizing border-box
+        width 100%
+        height 100%
+        text-align: center;
+        padding:px2rem(54) px2rem(20) px2rem(28) px2rem(20)
+        .bd
+          width 100%
+          height px2rem(63)
+          /*background blue*/
+          a
+            height px2rem(60)
+            width px2rem(170)
+            display inline-block
+            font-size 25px
+            color white
+            border 1px solid white
+            line-height px2rem(60)
+        .desc
+          width 100%
+          height px2rem(84)
+          margin-top px2rem(36)
+          /*background red*/
+          span
+            font-size px2rem(25)
+            color: #999;
+    .other
+      height px2rem(1900)
+      width px2rem(750)
+      header
+        height px2rem(120)
+        width px2rem(750)
+        p
+          &:nth-child(1)
+            height px2rem(42)
+            width px2rem(750)
+            font-size px2rem(30)
+            text-align center
+            line-height px2rem(42)
+            color #333
+          &:nth-child(2)
+            height px2rem(32)
+            width px2rem(750)
+            font-size px2rem(20)
+            margin-top px2rem(26)
+            text-align center
+            line-height px2rem(32)
+            color #ccc
+
+      ul
+        height px2rem(1900)
+        width px2rem(750)
+        li
+          height px2rem(562)
+          width px2rem(375)
+          float left
+          box-sizing border-box
+          padding 0 px2rem(10) px2rem(30) px2rem(20)
+          .pic
+            height px2rem(390)
+            width px2rem(345)
+            background antiquewhite
+            img
+              height px2rem(345)
+              width px2rem(345)
+            p
+              height px2rem(48)
+              width px2rem(345)
+              font-size px2rem(28)
+              ellipsis()
+              box-sizing border-box
+              padding px2rem(6) px2rem(10)
+              color #333
+          .text
+            width px2rem(345)
+            height px2rem(36)
+            color #333
+            font-size px2rem(28)
+            margin-top px2rem(16)
+            margin-left 2px
+          .price
+            width px2rem(345)
+            height px2rem(36)
+            color red
+            font-size px2rem(30)
+            margin-top px2rem(16)
+            margin-left 2px
+          .new
+            width px2rem(345)
+            height px2rem(36)
+            span
+              color red
+              font-size px2rem(25)
+              margin-top px2rem(16)
+              margin-left 2px
+              border 1px solid red
+              text-align center
 
 </style>

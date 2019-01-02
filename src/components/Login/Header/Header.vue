@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="row">
-      <div class="home" @click="$router.push('/profile')">
+      <div class="home" @click="$router.push('/home')">
         <i class="iconfont icon-shouye2"></i>
       </div>
       <div class="logo"></div>
@@ -28,7 +28,7 @@
 </script>
 
 <style lang='stylus' rel='stylesheet/stylus' scoped>
-  @import '../../common/stylus/mixins.styl'
+  @import '../../../common/stylus/mixins.styl'
   header
     height px2rem(88)
     position fixed
@@ -75,7 +75,7 @@
         height px2rem(54)
         display inline-block
         vertical-align middle
-        background url('../../assets/images/icons.png')
+        background url('../../../assets/images/icons.png')
         background-repeat no-repeat
         background-size px2rem(172) px2rem(398)
         background-position: 0px -126px;
@@ -95,7 +95,7 @@
             display block
             background-repeat: no-repeat;
             vertical-align middle
-            background url('../../assets/images/icons.png')
+            background url('../../../assets/images/icons.png')
             background-repeat no-repeat
             background-size px2rem(172) px2rem(398)
             background-position: 0px -330px;
@@ -107,7 +107,7 @@
             display block
             background-repeat: no-repeat;
             vertical-align middle
-            background url('../../assets/images/icons.png')
+            background url('../../../assets/images/icons.png')
             background-repeat no-repeat
             background-size px2rem(172) px2rem(398)
             background-position: 0 3px;

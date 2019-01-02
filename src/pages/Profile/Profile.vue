@@ -44,7 +44,7 @@
         </div>
       </div>
       <div class="g-row2">
-        <button class="w-button">退出登录</button>
+        <button class="w-button" @click="$router.push('/login')">退出登录</button>
       </div>
       <div class="footerr"></div>
     </div>

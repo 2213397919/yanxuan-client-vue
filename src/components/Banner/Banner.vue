@@ -24,7 +24,6 @@
     mounted(){
       reqBanner()
         .then(res=>{
-          // console.log(res.data)
           this.bannerArr = res.data
         })
     },

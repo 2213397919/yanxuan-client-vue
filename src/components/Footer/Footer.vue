@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <nav>
-      <a href="javascript:;" class="item" @click="goto('/home')" :class="{active: $route.path === '/home'}">
+      <a href="javascript:;" class="item" @click="goto('/home')" :class="{active: $route.path === '/home'}" >
         <i class="iconfont icon-shouye2"></i>
         <span>首页</span>
       </a>

@@ -6,27 +6,54 @@ const Category = () => import('../pages/Category/Category.vue')
 const General = () => import('../pages/General/General.vue')
 const Profile = () => import('../pages/Profile/Profile.vue')
 const Shopping = () => import('../pages/Shopping/Shopping.vue')
+const Login = () => import('../pages/Login/Login.vue')
+const HomeOther = () => import('../components/HomeOther/HomeOther')
 
 export default [
   {
     path: '/home',
     component: Home,
+    children:[
+      {
+        path:'/home/list/:id',
+        component:HomeOther,
+      }
+    ],
+    meta: {
+      showFooter: true
+    }
   },
   {
     path: '/category',
     component: Category,
+    meta: {
+      showFooter: true
+    }
   },
   {
     path: '/general',
     component: General,
+    meta: {
+      showFooter: true
+    }
   },
   {
     path: '/profile',
     component: Profile,
+    meta: {
+      showFooter: true
+    }
   },
   {
     path: '/shopping',
     component: Shopping,
+    meta: {
+      showFooter: true
+    }
+  },
+  {
+    path: '/login',
+    component: Login,
   },
   {
     path: '/',

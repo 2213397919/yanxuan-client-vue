@@ -6,12 +6,12 @@
         <i class="icon"></i>
         <span class="placeholder">搜索商品, 共2019款好物</span>
       </div>
-      <div class="login" @click="$router.replace('/profile')">登陆</div>
+      <div class="login" @click="$router.replace('/login')">登陆</div>
     </div>
     <div class="list">
       <ul class="arr_list">
-        <li  v-for="(list,index) in listArr" :key="index" @click="changeActive(list.id)">
-          <a href="javascript:;" :class="{active : current === list.id}">{{list.name}}</a>
+        <li  v-for="(list,index) in listArr" :key="index" >
+          <a href="javascript:;" :class="{active : id === list.id}" @click="change(list.id)">{{list.name}}</a>
         </li>
       </ul>
     </div>
@@ -44,12 +44,12 @@
           {id:1019000,name:'文体'},
           {id:1065000,name:'特色区'}
         ],
-        current:1022001
+        id:1022001
       }
     },
     methods:{
-      changeActive(id){
-        this.curren === id;
+      change(id){
+        this.id =id;
       }
     }
     }
@@ -119,6 +119,7 @@
        width px2rem(650)
        height px2rem(60)
        overflow hidden
+       background #fff
        .arr_list
          width px2rem(1313)
          height px2rem(60)
@@ -133,11 +134,14 @@
              &.active
               border-bottom 2px solid red
     .icon1
-       width px2rem(30)
-       height px2rem(30)
+       width px2rem(100)
+       text-align center
+       display block
+       height px2rem(60)
        position relative
-       right px2rem(-690)
-       top px2rem(-52)
+       right px2rem(-650)
+       top px2rem(-61)
+       background #fff
       .iconfont
           font-size px2rem(40)
 </style>
