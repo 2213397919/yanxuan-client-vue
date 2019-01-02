@@ -58,6 +58,9 @@ export default [
   {
     path: '/',
     component: Home,
+    meta: {
+      showFooter: true
+    }
   },
 ]
 

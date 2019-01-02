@@ -1,5 +1,4 @@
 <template>
-  <div class="list">
     <div class="left">
       <ul class="leftList">
         <li v-for="(list,index) in categoryL1List" :key="index" @click="active(list.id)">
@@ -7,7 +6,6 @@
         </li>
       </ul>
     </div>
-  </div>
 </template>
 
 <script>
@@ -28,9 +26,11 @@
       }
     },
     mounted(){
-      new BScroll('.list',{
-        click:true,
-        scrollY:true
+      this.$nextTick(()=>{
+        new BScroll('.left',{
+          click:true,
+          scrollY:true
+        })
       })
     },
     watch: {
@@ -43,6 +43,7 @@
   @import "../../common/stylus/mixins.styl"
   .left
      width px2rem(163)
+     height px2rem(600)
      float left
      border-right 1px solid #ccc
      .leftList

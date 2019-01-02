@@ -5,8 +5,8 @@
       <img :src="cates.wapBannerUrl"/>
     </div>
     <div class="list">
-      <ul class="cicle_list">
-        <li v-for="(subCate,index) in category[0].subCateList" :key="index">
+      <ul class="cicle_list" v-for="(cates,index) in category" :key="index">
+        <li v-for="(subCate,index) in cates.subCateList" :key="index" >
           <a href="javascript:;">
             <div class="circle">
               <img :src="subCate.wapBannerUrl"/>
@@ -57,7 +57,7 @@
   .right
     float left
     width px2rem(528)
-    height px2rem(1304)
+    height px2rem(1100)
     box-sizing border-box
     margin  px2rem(30) px2rem(25) px2rem(21) px2rem(20)
     .img
@@ -69,10 +69,10 @@
         height px2rem(192)
     .list
       width px2rem(528)
-      height px2rem(1080)
+      height px2rem(800)
       .cicle_list
         width px2rem(528)
-        height px2rem(1080)
+        height px2rem(800)
         li
           width px2rem(144)
           height px2rem(216)
