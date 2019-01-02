@@ -1,42 +1,42 @@
 <template>
   <div>
-    <!--<div v-for="(lis,index) in list" :key="index">-->
-    <!--<div class="tuijian" v-for="(topic,index) in lis.topics" :key="index">-->
-      <!--<a href="javascript:;">-->
-        <!--<div class="top">-->
-          <!--<img :src="topic.avatar"/>-->
-          <!--<span>{{topic.nickname}}</span>-->
-        <!--</div>-->
-        <!--<div class="middle">-->
-         <!--{{topic.title}}-->
-        <!--</div>-->
-        <!--<div class="bottom">-->
-          <!--<img :src="topic.picUrl"/>-->
-        <!--</div>-->
-        <!--<div class="icon">-->
-          <!--{{topic.readCount}}-->
-        <!--</div>-->
-      <!--</a>-->
-      <!--<Split/>-->
-    <!--</div>-->
-    <!--<Split/>-->
-    <!--</div>-->
-    <div class="daren">
+    <div v-for="(lis,index) in list" :key="index">
+    <div class="tuijian" v-for="(topic,index) in lis.topics" :key="index">
       <a href="javascript:;">
-        <div class="info">
-          <div class="name">
-            <span><img src="https://yanxuan.nosdn.127.net/3afb99e4d185d522d32a6642c9cafb3d.png?imageView&quality=65&thumbnail=56y56"/></span>
-            <span>海外组：小嗨</span>
-          </div>
-          <div class="title">满19元就有赠品，这份来自严选海外的新年礼物请查收</div>
-          <div class="decs">严选海外超走心新年礼</div>
-          <div class="see">7863人看过</div>
+        <div class="top">
+          <img :src="topic.avatar"/>
+          <span>{{topic.nickname}}</span>
         </div>
-        <div class="pic">
-          <img src="https://yanxuan.nosdn.127.net/c6dcc217368331eee66a5de630fbe0a8.jpg?imageView&quality=65&thumbnail=272y272"/>
+        <div class="middle">
+         {{topic.title}}
+        </div>
+        <div class="bottom">
+          <img :src="topic.picUrl"/>
+        </div>
+        <div class="icon">
+          {{topic.readCount}}
         </div>
       </a>
+      <Split/>
     </div>
+    <Split/>
+    </div>
+    <!--<div class="daren">-->
+      <!--<a href="javascript:;">-->
+        <!--<div class="info">-->
+          <!--<div class="name">-->
+            <!--<span><img src="https://yanxuan.nosdn.127.net/3afb99e4d185d522d32a6642c9cafb3d.png?imageView&quality=65&thumbnail=56y56"/></span>-->
+            <!--<span>海外组：小嗨</span>-->
+          <!--</div>-->
+          <!--<div class="title">满19元就有赠品，这份来自严选海外的新年礼物请查收</div>-->
+          <!--<div class="decs">严选海外超走心新年礼</div>-->
+          <!--<div class="see">7863人看过</div>-->
+        <!--</div>-->
+        <!--<div class="pic">-->
+          <!--<img src="https://yanxuan.nosdn.127.net/c6dcc217368331eee66a5de630fbe0a8.jpg?imageView&quality=65&thumbnail=272y272"/>-->
+        <!--</div>-->
+      <!--</a>-->
+    <!--</div>-->
   </div>
 </template>
 <script>

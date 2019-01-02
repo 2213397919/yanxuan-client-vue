@@ -11,12 +11,7 @@ export  default {
   },
   async getDaRen({commit}){
     const result = await reqDaRen();
-    if (result.code === 200){
       const daren = result.data
-      console.log(result.data)
-      console.log(daren)
       commit(DAREN,daren)
     }
-
-  }
 }

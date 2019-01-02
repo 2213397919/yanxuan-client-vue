@@ -6,4 +6,4 @@ export const reqkingKongModule = ()=> ajax('/kingKongModule',{},"POST")
 export const reqCategoryL1List = ()=> ajax('/categoryL1List',{},"POST")
 export const reqTab = ()=> ajax(YAN+'/getTabs.json')
 export const reqTuiJina = ()=> ajax(YAN+'/recManual.json')
-export const reqDaRen = ()=> ajax(YAN+'/getTabData.json');
+export const reqDaRen = ()=> ajax(YAN+'/getTabData.json?page=1&size=5&tabId=4');

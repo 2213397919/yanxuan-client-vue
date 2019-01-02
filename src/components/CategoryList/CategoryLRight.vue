@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="lists">
   <div class="right">
     <div class="img" v-for="(cates,index) in category" :key="index">
       <img :src="cates.wapBannerUrl"/>
@@ -22,6 +22,7 @@
 
 <script>
   import {mapState} from 'vuex'
+  import BScroll from 'better-scroll'
   export default {
 
     data(){
@@ -36,6 +37,12 @@
         console.log(category)
         this.category=category;
       }
+    },
+    mounted(){
+      new BScroll('.lists',{
+        click:true,
+        scrollY:true
+      })
     },
     watch:{
       getCategory(){

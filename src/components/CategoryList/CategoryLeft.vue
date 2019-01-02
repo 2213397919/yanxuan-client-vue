@@ -1,4 +1,5 @@
 <template>
+  <div class="list">
     <div class="left">
       <ul class="leftList">
         <li v-for="(list,index) in categoryL1List" :key="index" @click="active(list.id)">
@@ -6,10 +7,12 @@
         </li>
       </ul>
     </div>
+  </div>
 </template>
 
 <script>
   import {mapState} from 'vuex';
+  import BScroll from 'better-scroll'
   export default {
     name: 'CategoryLeft',
     props:['categoryL1List'],
@@ -24,7 +27,13 @@
         this.$store.dispatch('getId',this.id)
       }
     },
-    watch:{
+    mounted(){
+      new BScroll('.list',{
+        click:true,
+        scrollY:true
+      })
+    },
+    watch: {
 
     }
   }
@@ -32,15 +41,12 @@
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "../../common/stylus/mixins.styl"
-
   .left
      width px2rem(163)
-     height px2rem(1300)
      float left
      border-right 1px solid #ccc
      .leftList
        width px2rem(163)
-       height px2rem(1300)
        box-sizing border-box
        padding px2rem(40) 0 px2rem(138) 0
        li
